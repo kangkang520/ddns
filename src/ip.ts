@@ -24,8 +24,8 @@ function request(url: string) {
  */
 export async function getip4(): Promise<string | null> {
 	try {
-		const body = await request(`http://ipv4.lookup.test-ipv6.com/ip/?testdomain=test-ipv6.com&testname=test_asn4`)
-		return JSON.parse(body + '').ip
+		const body = await request(`http://4.ipw.cn`)
+		return body + ''
 	} catch (err) {
 		return null
 	}
@@ -37,8 +37,8 @@ export async function getip4(): Promise<string | null> {
  */
 export async function getip6(): Promise<string | null> {
 	try {
-		const body = await request(`http://ipv6.lookup.test-ipv6.com/ip/?testdomain=test-ipv6.com&testname=test_asn6`)
-		return JSON.parse(body + '').ip
+		const body = await request(`http://6.ipw.cn`)
+		return body + ''
 	} catch (err) {
 		return null
 	}
